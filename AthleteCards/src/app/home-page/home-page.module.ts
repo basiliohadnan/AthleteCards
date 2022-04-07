@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HomePageComponent } from './home-page.component';
 
+import { HomePageRoutingModule } from './home-page-routing.module';
+import { HomePageComponent } from './home-page.component';
+import { BannerModule } from '../shared/banner/banner.module';
 
 
 @NgModule({
@@ -9,7 +11,12 @@ import { HomePageComponent } from './home-page.component';
     HomePageComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    HomePageRoutingModule,
+    BannerModule
+  ],
+  exports: [
+    HomePageComponent
   ]
 })
 export class HomePageModule { }

@@ -1,0 +1,16 @@
+.banner {
+    &__container {
+        margin-top: 20vw;
+        // background-color: var(--cinereous);
+        width: 100vw;
+        height: 16vw;
+        right: 0;
+        top: 0;
+        position: absolute;
+    }
+
+    &__message {
+        color: #FFFFFF;
+        text-align: center;
+    }
+}

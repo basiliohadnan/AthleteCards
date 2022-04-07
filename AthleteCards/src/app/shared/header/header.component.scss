@@ -1,0 +1,25 @@
+.header {
+
+    &__container {
+        background-color: var(--star-command-blue);
+        width: 100vw;
+        height: 13vw;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    &__img {
+        width: 14vw;
+        height: inherit;
+        float: left;
+        margin-left: 2vw;
+        filter: brightness(0) invert(1);
+    }
+
+    &__title {
+        color: #FFFFFF;
+        text-align: right;
+        margin-right: 2vw;
+    }
+}
