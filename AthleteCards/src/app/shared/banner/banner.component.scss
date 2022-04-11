@@ -1,9 +1,9 @@
 .banner {
     &__container {
-        margin-top: 20vw;
+        margin-top: 4rem;
         // background-color: var(--cinereous);
         width: 100vw;
-        height: 16vw;
+        height: 5rem;
         right: 0;
         top: 0;
         position: absolute;
@@ -12,5 +12,6 @@
     &__message {
         color: #FFFFFF;
         text-align: center;
+        font-size: 1.5rem;
     }
 }
