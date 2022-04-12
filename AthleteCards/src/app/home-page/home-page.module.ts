@@ -5,6 +5,7 @@ import { HomePageRoutingModule } from './home-page-routing.module';
 import { HomePageComponent } from './home-page.component';
 import { BannerModule } from '../shared/banner/banner.module';
 import { InputModule } from '../shared/input/input.module';
+import { ButtonModule } from '../shared/button/button.module';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { InputModule } from '../shared/input/input.module';
     CommonModule,
     HomePageRoutingModule,
     BannerModule,
-    InputModule
+    InputModule,
+    ButtonModule
   ],
   exports: [
     HomePageComponent

@@ -1,12 +1,10 @@
 .banner {
     &__container {
         margin-top: 4rem;
-        // background-color: var(--cinereous);
         width: 100vw;
         height: 5rem;
-        right: 0;
-        top: 0;
         position: absolute;
+        left: 0;
     }
 
     &__message {
