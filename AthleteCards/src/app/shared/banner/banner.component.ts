@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class BannerComponent implements OnInit {
   @Input() message: string = ''
-  @Input() color: string = ''
+  @Input() backgroundColor: string = ''
 
   constructor() { }
 
