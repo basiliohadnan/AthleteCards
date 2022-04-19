@@ -1,7 +1,6 @@
 import { Input, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { InputRoutingModule } from './input-routing.module';
 import { InputComponent } from './input.component';
 
 
@@ -11,7 +10,6 @@ import { InputComponent } from './input.component';
   ],
   imports: [
     CommonModule,
-    InputRoutingModule
   ],
   exports: [
     InputComponent

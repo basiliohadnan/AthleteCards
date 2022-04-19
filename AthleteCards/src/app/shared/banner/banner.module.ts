@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { BannerRoutingModule } from './banner-routing.module';
 import { BannerComponent } from './banner.component';
 
 
@@ -11,7 +10,6 @@ import { BannerComponent } from './banner.component';
   ],
   imports: [
     CommonModule,
-    BannerRoutingModule
   ],
   exports: [
     BannerComponent
