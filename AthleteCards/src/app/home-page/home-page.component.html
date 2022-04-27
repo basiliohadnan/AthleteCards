@@ -1,8 +1,16 @@
-<app-banner backgroundColor="var(--cinereous)" message="Paste here your access token"></app-banner>
-<app-input></app-input>
-
-<p class="home-page__main-text">ready? click here, then:</p>
-
 <div class="home-page__container">
-    <app-button backgroundColor="var(--pale-silver)" buttonText="→"></app-button>
+    <app-banner backgroundColor="var(--cinereous)" message="Paste below your access token"></app-banner>
+
+    <div class="form-field">
+        <app-input 
+            class="form-field__input"
+            placeholder="example: '84c255a25f2e...'"
+            type="text"
+            id="tokenInput">
+        </app-input>
+    </div>
+
+    <p class="home-page__main-text">ready? click here, then:</p>
+
+    <app-button (click)="showAthleteCard()" backgroundColor="var(--pale-silver)" buttonText="→"></app-button>
 </div>

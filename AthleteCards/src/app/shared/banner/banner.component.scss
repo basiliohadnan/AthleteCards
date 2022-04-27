@@ -1,12 +1,10 @@
 .banner {
     &__container {
-        margin-top: 4rem;
         width: 100vw;
         height: 5rem;
-        position: absolute;
-        left: 0;
-        text-align: center;
         margin-top: 5rem;
+        margin-left: -8px;
+        display: inline-block;
     }
 
     &__message {

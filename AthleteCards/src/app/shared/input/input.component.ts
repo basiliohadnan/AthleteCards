@@ -7,7 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class InputComponent implements OnInit {
 
-  @Input() token: string = ''
+  @Input() value: string = 'value example'
+  @Input() placeholder: string = ''
 
   constructor() { }
 

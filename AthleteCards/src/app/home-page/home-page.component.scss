@@ -1,7 +1,7 @@
 .home-page {
     &__main-text {
         text-align: center;
-        margin-top: 11rem;
+        margin-top: 4rem;
     }
 
     &__container {
@@ -11,4 +11,11 @@
 
 p {
     text-align: center;
+}
+
+.form-field {
+    margin-top: 2em;
+    &__label {
+        color: red;
+    }
 }

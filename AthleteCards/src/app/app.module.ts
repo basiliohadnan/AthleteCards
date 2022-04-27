@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomePageModule } from './home-page/home-page.module';
-import { FooterComponent } from './shared/footer/footer.component';
 import { FooterModule } from './shared/footer/footer.module';
 import { HeaderModule } from './shared/header/header.module';
 
@@ -16,7 +16,8 @@ import { HeaderModule } from './shared/header/header.module';
     AppRoutingModule,
     HomePageModule,
     HeaderModule,
-    FooterModule
+    FooterModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

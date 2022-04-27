@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { HomePageRoutingModule } from './home-page-routing.module';
 import { HomePageComponent } from './home-page.component';
 import { BannerModule } from '../shared/banner/banner.module';
@@ -17,7 +16,7 @@ import { ButtonModule } from '../shared/button/button.module';
     HomePageRoutingModule,
     BannerModule,
     InputModule,
-    ButtonModule
+    ButtonModule,
   ],
   exports: [
     HomePageComponent
