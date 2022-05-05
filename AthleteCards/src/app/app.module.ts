@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomePageModule } from './home-page/home-page.module';
 import { FooterModule } from './shared/footer/footer.module';
 import { HeaderModule } from './shared/header/header.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -15,9 +15,7 @@ import { HeaderModule } from './shared/header/header.module';
     BrowserModule,
     AppRoutingModule,
     HomePageModule,
-    HeaderModule,
-    FooterModule,
-    FormsModule
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

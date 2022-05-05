@@ -4,8 +4,11 @@ import { RouterModule, Routes } from '@angular/router'
 const routes: Routes = [
   {
     path: '',
-    // pathMatch: 'full',
     loadChildren: () => import('../app/home-page/home-page.module').then(module => module.HomePageModule)
+  },
+  {
+    path: 'profile/:token',
+    loadChildren: () => import('../app/profile-page/profile-page.module').then(module => module.ProfilePageModule)
   }
 ]
 
