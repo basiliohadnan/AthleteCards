@@ -1,17 +1,20 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-button',
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss']
 })
-export class ButtonComponent implements OnInit {
+export class ButtonComponent {
 
   @Input() buttonText: string = ''
   @Input() backgroundColor: string = ''
+  @Input() route: string[] = []
 
-  constructor() { }
+  constructor(private router: Router) { }
 
-  ngOnInit(): void {
+  testMethod(){
+    console.log(this.route);
   }
 }
