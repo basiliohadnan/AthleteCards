@@ -1,23 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss']
 })
-export class HomePageComponent implements OnInit {
+export class HomePageComponent {
 
+  token: string = ''
 
-  ngOnInit(): void {
+  constructor() {
   }
 
-  showInputValue(){
-    var inputValue = document.getElementById('tokenInput')?.textContent
-    console.log('value: ', inputValue);
-  }
-
-  showAthleteCard(){
-    alert("botão clicado!")
-    this.showInputValue()
+  receiveValue(value: string) {
+    this.token = value
+    console.log(value)
   }
 }
