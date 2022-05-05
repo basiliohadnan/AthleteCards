@@ -1,18 +1,19 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-input',
   templateUrl: './input.component.html',
   styleUrls: ['./input.component.scss']
 })
-export class InputComponent implements OnInit {
-
-  @Input() value: string = 'value example'
+export class InputComponent {
   @Input() placeholder: string = ''
+  value = null
+  @Output() valueEmitter = new EventEmitter() 
 
   constructor() { }
 
-  ngOnInit(): void {
+  throwInput() {
+    this.valueEmitter.emit(this.value)
   }
 
 }

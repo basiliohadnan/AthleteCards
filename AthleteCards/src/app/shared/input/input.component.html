@@ -1,3 +1,7 @@
 <div class="form-group">
-    <input placeholder={{placeholder}} value={{value}} class="form-control" formControlName="token" />
+    <input placeholder="placeholder"
+        [(ngModel)]="value"
+        (input)="throwInput()"
+        class="form-control"
+    />
 </div>
