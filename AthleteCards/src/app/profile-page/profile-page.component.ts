@@ -17,7 +17,6 @@ export class ProfilePageComponent implements OnInit {
       if (params && params.token) {
         this.token = params.token
       }
-    }) 
+    })
   }
-
 }
