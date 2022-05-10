@@ -14,7 +14,8 @@
         <div class="home-page__btn -wrapper">
             <app-button backgroundColor="var(--pale-silver)"
                 buttonText="→"
-                [route]="['profile',token]">
+                (valueEmitter)="viewAthleteCard()"
+            >
             </app-button>
         </div>
     </form>
