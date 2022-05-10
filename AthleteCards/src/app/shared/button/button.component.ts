@@ -1,5 +1,4 @@
-import { Component, Input } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-button',
@@ -12,9 +11,16 @@ export class ButtonComponent {
   @Input() backgroundColor: string = ''
   @Input() route: string[] = []
 
-  constructor(private router: Router) { }
+  value = null
+  @Output() valueEmitter = new EventEmitter() 
 
-  testMethod(){
+  constructor() { }
+
+  throwInput() {
+    this.valueEmitter.emit(this.value)
+  }
+
+  testMethod() {
     console.log(this.route);
   }
 }
