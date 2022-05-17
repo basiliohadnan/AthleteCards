@@ -1,1 +1,26 @@
-<p>profile-page works (:</p>
+<div class="container">
+  <h2 class="container__title">Athlete Stats</h2>
+  <div class="table__container">
+    <table class="table">
+      <thead class="table__header">
+        <th class="table__header__content">Running Totals Stats</th>
+      </thead>
+      <thead class="table__header">
+        <th class="table__header__content">Runs</th>
+        <th class="table__header__content">Distance</th>
+        <th class="table__header__content">Elapsed Time</th>
+        <th class="table__header__content">Elevation</th>
+        <th class="table__header__content">Moving Time</th>
+      </thead>
+      <tbody>
+        <tr class="table__line">
+          <td class="table__content">{{athleteStats?.all_run_totals?.count}}</td>
+          <td class="table__content">{{athleteStats?.all_run_totals?.distance}}m</td>
+          <td class="table__content">{{athleteStats?.all_run_totals?.elapsed_time}}</td>
+          <td class="table__content">{{athleteStats?.all_run_totals?.elevation_gain}}m</td>
+          <td class="table__content">{{athleteStats?.all_run_totals?.moving_time}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
