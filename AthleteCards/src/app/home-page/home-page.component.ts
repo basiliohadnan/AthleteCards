@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ProfilePageService } from '../profile-page/profile-page.service';
+import { AthleteStats } from '../shared/interfaces/athlete-stats';
 
 @Component({
   selector: 'app-home-page',
@@ -8,10 +9,12 @@ import { ProfilePageService } from '../profile-page/profile-page.service';
 })
 export class HomePageComponent {
 
-  token: string = ''
+  token: string = 'ex: 2de421bfac076462a...'
 
-  constructor(private profilePageService: ProfilePageService) {
-  }
+  constructor(
+    private profilePageService: ProfilePageService
+  ) { }
+
 
   receiveValue(value: string) {
     this.token = value
@@ -28,12 +31,9 @@ export class HomePageComponent {
 
   viewAthleteCard() {
     if (!this.validateToken(this.token)) {
-      alert("Token must have at least 42 characters... Try again.")
+      alert("Token must be at least 40 characters long... Try again.")
     }
     else {
-      this.profilePageService.logActivityStats(this.token).subscribe(x => {
-        console.log(x);
-      })
       this.profilePageService.loadProfilePage(this.token)
     }
   }
