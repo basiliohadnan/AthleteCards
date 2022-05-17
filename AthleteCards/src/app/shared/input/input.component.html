@@ -1,7 +1,3 @@
 <div class="form-group">
-    <input placeholder="placeholder"
-        [(ngModel)]="value"
-        (input)="throwInput()"
-        class="form-control"
-    />
+    <input class="form-control" placeholder={{placeholder}} [(ngModel)]="value" (input)="throwInput()" />
 </div>
