@@ -1,7 +1,7 @@
 export interface AnyActivityTotals {
-    count: Number,
+    count: number,
     distance: number,
-    elapsed_time: Number,
-    elevation_gain: Number,
-    moving_time: Number
+    elapsed_time: number,
+    elevation_gain: number,
+    moving_time: number
 }

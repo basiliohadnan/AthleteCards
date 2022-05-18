@@ -1,0 +1,22 @@
+export interface LoggedAthleteInfo {
+  badge_type_id: number,
+  bio: string,
+  city: string,
+  country: string,
+  created_at: string,
+  firstname: string,
+  follower: null,
+  friend: null,
+  id: number,
+  lastname: string,
+  premium: boolean,
+  profile: string,
+  profile_medium: string,
+  resource_state: 2
+  sex: string,
+  state: string,
+  summit: boolean,
+  updated_at: string,
+  username: string,
+  weight: number,
+}
