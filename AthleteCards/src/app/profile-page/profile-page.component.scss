@@ -1,3 +1,16 @@
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 5px;
+    text-align: left;
+}
+
 p {
     margin-top: 100px;
 }
@@ -8,7 +21,30 @@ p {
 
     &__title {
         text-align: center;
-        color: red;
+        color: var(--strava-orange);
         justify-content: center;
+    }
+}
+
+.table {
+    &__header {
+        &-title {
+            font-weight: 900;
+            font-size: 0.8rem;
+
+        }
+
+        &-content {
+            font-size: 0.6rem;
+        }
+    }
+
+    &__line {
+        text-align: center;
+
+        &-content {
+
+            font-size: 0.75rem;
+        }
     }
 }

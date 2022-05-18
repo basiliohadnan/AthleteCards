@@ -1,24 +1,31 @@
 <div class="container">
   <h2 class="container__title">Athlete Stats</h2>
+  <img class="container__avatar-img" src={{loggedAthleteInfo?.profile}}>
+  <h3 class="container__athlete-name">{{loggedAthleteInfo?.firstname}} {{loggedAthleteInfo?.lastname }}</h3>
+  <h3 class="container__athlete-city">{{loggedAthleteInfo?.city}}</h3>
   <div class="table__container">
     <table class="table">
       <thead class="table__header">
-        <th class="table__header__content">Running Totals Stats</th>
-      </thead>
-      <thead class="table__header">
-        <th class="table__header__content">Runs</th>
-        <th class="table__header__content">Distance</th>
-        <th class="table__header__content">Elapsed Time</th>
-        <th class="table__header__content">Elevation</th>
-        <th class="table__header__content">Moving Time</th>
+        <tr class="table__line">
+          <th class="table__header-title" colspan="2">Running Totals Stats</th>
+        </tr>
       </thead>
       <tbody>
         <tr class="table__line">
-          <td class="table__content">{{athleteStats?.all_run_totals?.count}}</td>
-          <td class="table__content">{{athleteStats?.all_run_totals?.distance}}m</td>
-          <td class="table__content">{{athleteStats?.all_run_totals?.elapsed_time}}</td>
-          <td class="table__content">{{athleteStats?.all_run_totals?.elevation_gain}}m</td>
-          <td class="table__content">{{athleteStats?.all_run_totals?.moving_time}}</td>
+          <th class="table__header-content">Runs</th>
+          <td class="table__line-content">{{athleteStats?.all_run_totals?.count}}</td>
+        </tr>
+        <tr class="table__line">
+          <th class="table__header-content">Distance</th>
+          <td class="table__line-content">{{athleteStats?.all_run_totals?.distance}}K</td>
+        </tr>
+        <tr class="table__line">
+          <th class="table__header-content">Moving Time</th>
+          <td class="table__line-content">{{athleteStats?.all_run_totals?.moving_time}} hours</td>
+        </tr>
+        <tr class="table__line">
+          <th class="table__header-content">Avg Pace</th>
+          <td class="table__line-content">{{avgPace}}km/min</td>
         </tr>
       </tbody>
     </table>

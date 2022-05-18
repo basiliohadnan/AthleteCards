@@ -11,6 +11,19 @@ export class ProfilePageService {
 
   constructor(private httpClient: HttpClient, private router: Router) { }
 
+
+  getLoggedInAthlete(token: string): Observable<any> {
+    var url = "https://www.strava.com/api/v3/athlete"
+    this.token = token
+
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`
+    })
+    return this.httpClient.get(url, { headers: headers })
+  }
+
+
   logActivityStats(token: string): Observable<any> {
     var id = 28361582
     var url = `https://www.strava.com/api/v3/athletes/${id}/stats`
