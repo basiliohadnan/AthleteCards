@@ -1,13 +1,15 @@
 <div class="container">
-  <h2 class="container__title">Athlete Stats</h2>
-  <img class="container__avatar-img" src={{loggedAthleteInfo?.profile}}>
-  <h3 class="container__athlete-name">{{loggedAthleteInfo?.firstname}} {{loggedAthleteInfo?.lastname }}</h3>
-  <h3 class="container__athlete-city">{{loggedAthleteInfo?.city}}</h3>
-  <div class="table__container">
+  <div class="container__box">
+    <h3 class="container__athlete-name">{{loggedAthleteInfo?.firstname}} {{loggedAthleteInfo?.lastname }}</h3>
+    <img class="container__avatar-img" src={{loggedAthleteInfo?.profile}}>
+    <h5 class="container__athlete-city">Currently in {{loggedAthleteInfo?.city}}</h5>
     <table class="table">
       <thead class="table__header">
         <tr class="table__line">
-          <th class="table__header-title" colspan="2">Running Totals Stats</th>
+          <th class="table__header-title" colspan="2">
+            <app-icon source="./assets/img/run-icon.png" alt="Shoes Icon" [height]="25" [width]="25"></app-icon>
+            Running
+          </th>
         </tr>
       </thead>
       <tbody>
@@ -25,7 +27,35 @@
         </tr>
         <tr class="table__line">
           <th class="table__header-content">Avg Pace</th>
-          <td class="table__line-content">{{avgPace}}km/min</td>
+          <td class="table__line-content">{{runningAvgPace}} min/km</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="table">
+      <thead class="table__header">
+        <tr class="table__line">
+          <th class="table__header-title" colspan="2">
+            <app-icon source="./assets/img/bike-icon.png" alt="Bike Icon" [height]="25" [width]="25"></app-icon>
+            Cycling
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table__line">
+          <th class="table__header-content">Rides</th>
+          <td class="table__line-content">{{athleteStats?.all_ride_totals?.count}}</td>
+        </tr>
+        <tr class="table__line">
+          <th class="table__header-content">Distance</th>
+          <td class="table__line-content">{{athleteStats?.all_ride_totals?.distance}}K</td>
+        </tr>
+        <tr class="table__line">
+          <th class="table__header-content">Moving Time</th>
+          <td class="table__line-content">{{athleteStats?.all_ride_totals?.moving_time}} hours</td>
+        </tr>
+        <tr class="table__line">
+          <th class="table__header-content">Avg Speed</th>
+          <td class="table__line-content">{{cyclingAvgSpeed}} km/h</td>
         </tr>
       </tbody>
     </table>

@@ -3,30 +3,41 @@ th,
 td {
     border: 1px solid black;
     border-collapse: collapse;
-}
-
-th,
-td {
-    padding: 5px;
+    padding: 0.4rem;
     text-align: left;
 }
 
-p {
-    margin-top: 100px;
-}
-
 .container {
-    margin-top: 4rem;
-    display: inline-block;
+    margin-top: 7rem;
+    justify-content: space-around;
+    display: block;
+    text-align: center;
+
+    &__box {
+        border: 3px solid var(--strava-orange);
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        width: 80vw;
+        display: inline-block;
+    }
 
     &__title {
         text-align: center;
         color: var(--strava-orange);
         justify-content: center;
     }
+
+    &__avatar-img {
+        border: 3px solid #bbbbbb;
+        border-radius: 50%;
+    }
 }
 
 .table {
+    width: 70vw;
+    display: inline-table;
+    margin-bottom: 2vh;
+
     &__header {
         &-title {
             font-weight: 900;
