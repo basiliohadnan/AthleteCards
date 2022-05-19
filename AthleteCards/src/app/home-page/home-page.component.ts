@@ -21,17 +21,13 @@ export class HomePageComponent {
   }
 
   validateToken(token: string) {
-    if (token.length < 40) {
-      return false
-    }
-    else {
-      return true
-    }
+    if (token.length < 40 || !token) return false
+    else return true
   }
 
   viewAthleteCard() {
     if (!this.validateToken(this.token)) {
-      alert("Token must be at least 40 characters long... Try again.")
+      alert("Invalid token... Try again.")
     }
     else {
       this.profilePageService.loadProfilePage(this.token)
