@@ -1,27 +1,32 @@
-# AthleteCards
+# AthleteCards!
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.1.
+Angular based app aimed to show [Strava](http://strava.com/)'s Athlete Cards with overall view of profiles and their activities stats.
 
-## Development server
+- [Figma project](https://www.figma.com/file/f24r1rMYrjdbk117uZGgvP/Untitled?node-id=0%3A1)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- [Color references](https://coolors.co/8a716a-c2b8b2-197bbd-125e8a-204b57)
 
-## Code scaffolding
+- Style structure used: [SCSS](https://sass-lang.com/)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Jasmine/Karma unit tests introduction | [references](https://angular.io/guide/testing)
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+**How to run it**
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+ 1. Clone the project
+ 2. Install [nodeJS](https://nodejs.org/en/download/)
+ 3. Install [angularCLI](https://angular.io/cli)
+ 4. Open your terminal 
+ 5. Navigate to the folder where you have cloned the project
+ 6. Run the command on your terminal: `ng s -o`
+ 7. Access your profile page on Strava (for example: https://www.strava.com/athletes/28361582) *or create it, if you don't have it already.*
+ 8. Copy the id shown at the end of the URL above and save it
+ 9. Access the [API settings' page](https://www.strava.com/settings/api) after logged in![AccessTokenPage](https://i.ibb.co/7KJ2QWt/accesstoken.png)
+ 10. Click "Show", as indicated and copy the Access Token displayed
+ 11.	Navigate to the AthleteCards' tab
+ 12.	Paste the info as asked
+![ID/Token](https://i.ibb.co/g40qtJB/image.png)
+ 14. After pasting the info, click the Right Arrow.
+ 15. Verify the information brought to you (:
+![enter image description here](https://i.ibb.co/68gT2j8/image.png)
