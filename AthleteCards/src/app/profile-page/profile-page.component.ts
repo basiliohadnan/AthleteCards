@@ -24,7 +24,6 @@ export class ProfilePageComponent implements OnInit {
   runningAvgPace: any
   cyclingAvgSpeed: any
 
-
   constructor(private activatedRoute: ActivatedRoute, private profilePageService: ProfilePageService) { }
 
   ngOnInit(): void {

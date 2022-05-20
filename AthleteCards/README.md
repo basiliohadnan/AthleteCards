@@ -36,3 +36,5 @@ Angular based app aimed to show [Strava](http://strava.com/)'s Athlete Cards wit
  15. Verify the information brought to you (:
  
 ![AthleteStats Page](https://i.ibb.co/68gT2j8/image.png)
+
+ 16. To run the tests, simply type `npm run test` on your terminal
