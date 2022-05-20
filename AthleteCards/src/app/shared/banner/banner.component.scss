@@ -1,9 +1,9 @@
 .banner {
     &__container {
-        width: 100vw;
+        width: 85vw;
         height: 5rem;
         margin-top: 5rem;
-        margin-left: -8px;
+        margin-bottom: 2rem;
         display: inline-block;
     }
 
@@ -13,3 +13,17 @@
         font-size: 1.3rem;
     }
 }
+
+@media screen and (min-width: 1024px) {
+    .banner {
+        &__container {
+            max-width: 75vw;
+        }
+
+        &__message {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {}

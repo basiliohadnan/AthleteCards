@@ -1,7 +1,7 @@
 .header {
     &__container {
-        background-color: var(--star-command-blue);
         width: 100vw;
+        background-color: var(--star-command-blue);
         height: 4rem;
         position: absolute;
         right: 0;
@@ -26,3 +26,8 @@
         text-decoration: none;
     }
 }
+
+@media screen and (min-width: 1024px) {
+}
+
+@media screen and (min-width: 768px) {}
