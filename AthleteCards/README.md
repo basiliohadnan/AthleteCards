@@ -23,11 +23,16 @@ Angular based app aimed to show [Strava](http://strava.com/)'s Athlete Cards wit
  7. Access your profile page on Strava (for example: https://www.strava.com/athletes/28361582) *or create it, if you don't have it already.*
  8. Copy the id shown at the end of the URL above and save it
  9. Access the [API settings' page](https://www.strava.com/settings/api) after logged in
+
  ![AccessTokenPage](https://i.ibb.co/7KJ2QWt/accesstoken.png)
+
  10. Click "Show", as indicated and copy the Access Token displayed
  11.	Navigate to the AthleteCards' tab
  12.	Paste the info as asked
+
 ![ID/Token inputs](https://i.ibb.co/g40qtJB/image.png)
+
  14. After pasting the info, click the Right Arrow.
  15. Verify the information brought to you (:
+ 
 ![AthleteStats Page](https://i.ibb.co/68gT2j8/image.png)
