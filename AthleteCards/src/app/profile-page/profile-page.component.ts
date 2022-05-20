@@ -14,6 +14,7 @@ import { ProfilePageService } from './profile-page.service';
 })
 export class ProfilePageComponent implements OnInit {
 
+  private id: number = 0
   private token: string = ''
   athleteStats!: AthleteStats
   athleteStatsAllRunTotals!: AllRunTotals
@@ -28,8 +29,9 @@ export class ProfilePageComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params: any) => {
-      if (params && params.token) {
+      if (params && params.token && params.id) {
         this.token = params.token
+        this.id = params.id
         this.logActivityStats()
       }
     })
@@ -42,7 +44,7 @@ export class ProfilePageComponent implements OnInit {
   }
 
   logActivityStats() {
-    this.profilePageService.logActivityStats(this.token).subscribe((response: AthleteStats) => {
+    this.profilePageService.logActivityStats(this.token, this.id).subscribe((response: AthleteStats) => {
       this.athleteStats = response
       this.athleteStatsAllRunTotals = this.athleteStats.all_run_totals
       this.athleteStatsAllRideTotals = this.athleteStats.all_ride_totals

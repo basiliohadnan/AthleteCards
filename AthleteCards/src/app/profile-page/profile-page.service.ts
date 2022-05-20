@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProfilePageService {
+  id: number = 0
   token: string = ''
 
   constructor(private httpClient: HttpClient, private router: Router) { }
@@ -24,8 +25,7 @@ export class ProfilePageService {
   }
 
 
-  logActivityStats(token: string): Observable<any> {
-    var id = 28361582
+  logActivityStats(token: string, id: number): Observable<any> {
     var url = `https://www.strava.com/api/v3/athletes/${id}/stats`
     this.token = token
 
@@ -36,7 +36,7 @@ export class ProfilePageService {
     return this.httpClient.get(url, { headers: headers })
   }
 
-  loadProfilePage(token: string) {
-    this.router.navigateByUrl('profile/' + token)
+  loadProfilePage(token: string, id: number) {
+    this.router.navigateByUrl('profile/' + token + '/id/' + id)
   }
 }

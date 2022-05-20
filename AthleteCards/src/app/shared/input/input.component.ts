@@ -6,7 +6,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./input.component.scss']
 })
 export class InputComponent {
-  @Input() placeholder: string = ''
+  @Input() placeholder: any
   value = null
   @Output() valueEmitter = new EventEmitter() 
 
@@ -15,5 +15,4 @@ export class InputComponent {
   throwInput() {
     this.valueEmitter.emit(this.value)
   }
-
 }

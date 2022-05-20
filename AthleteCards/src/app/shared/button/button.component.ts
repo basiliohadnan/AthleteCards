@@ -10,7 +10,6 @@ export class ButtonComponent {
   @Input() buttonText: string = ''
   @Input() backgroundColor: string = ''
   @Input() route: string[] = []
-
   value = null
   @Output() valueEmitter = new EventEmitter()
 

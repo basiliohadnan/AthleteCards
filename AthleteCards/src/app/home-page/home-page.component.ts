@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { ProfilePageService } from '../profile-page/profile-page.service';
-import { AthleteStats } from '../shared/interfaces/athlete-stats';
 
 @Component({
   selector: 'app-home-page',
@@ -9,16 +8,22 @@ import { AthleteStats } from '../shared/interfaces/athlete-stats';
 })
 export class HomePageComponent {
 
-  token: string = 'ex: 2de421bfac076462a...'
+  id: number = 28361582
+  token: string = '2de421bfac076462a...'
 
   constructor(
     private profilePageService: ProfilePageService
   ) { }
 
+  receiveIdValue = (id: number) => this.id = id
 
-  receiveValue(value: string) {
-    this.token = value
+  validateId(id: number) {
+    if (id < 7) return false
+    else return true
   }
+
+  receiveTokenValue = (token: string) => this.token = token
+
 
   validateToken(token: string) {
     if (token.length < 40 || !token) return false
@@ -26,11 +31,8 @@ export class HomePageComponent {
   }
 
   viewAthleteCard() {
-    if (!this.validateToken(this.token)) {
-      alert("Invalid token... Try again.")
-    }
-    else {
-      this.profilePageService.loadProfilePage(this.token)
-    }
+    if (!this.validateToken(this.token)) alert("Invalid token... Try again.")
+    else if (!this.validateId(this.id)) alert("Invalid id... Try again.")
+    else this.profilePageService.loadProfilePage(this.token, this.id)
   }
 }
