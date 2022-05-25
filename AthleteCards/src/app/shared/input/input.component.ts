@@ -7,12 +7,11 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class InputComponent {
   @Input() placeholder: any
-  value = null
-  @Output() valueEmitter = new EventEmitter() 
+  @Input() type: any
+  value: any = null
+  @Output() valueEmitter = new EventEmitter()
 
   constructor() { }
 
-  throwInput() {
-    this.valueEmitter.emit(this.value)
-  }
+  throwInput = (): any => this.valueEmitter.emit(this.value)
 }

@@ -1,7 +1,7 @@
 table,
 th,
 td {
-    border: 1px solid black;
+    border: 1px solid #000000;
     border-collapse: collapse;
     padding: 0.4rem;
     text-align: left;
@@ -16,7 +16,7 @@ td {
     &__box {
         border: 3px solid var(--strava-orange);
         border-radius: 0.5rem;
-        padding: 0.5rem;
+        padding: 1rem;
         width: 80vw;
         display: inline-block;
     }
@@ -54,8 +54,13 @@ td {
         text-align: center;
 
         &-content {
-
             font-size: 0.75rem;
         }
+    }
+}
+
+.notfoundblock, .loadingblock {
+    &__img {
+        margin-bottom: 4rem;
     }
 }

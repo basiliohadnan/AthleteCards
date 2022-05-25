@@ -1,4 +1,8 @@
 <div class="form-group">
-    <input class="form-control" placeholder={{placeholder}} [(ngModel)]="value"
+    <input 
+        class="form-control" 
+        type={{type}}
+        placeholder={{placeholder}} 
+        [(ngModel)]="value"
         (input)="throwInput()"/>
 </div>

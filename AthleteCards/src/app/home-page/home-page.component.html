@@ -1,23 +1,29 @@
 <meta name="viewport" content="width=device-width initial-scale=1.0">
-
 <section class="home-page__container">
     <form class="home-page__container-form">
-        <app-banner backgroundColor="var(--sapphire-blue)" message="Paste below your id and access token"></app-banner>
+        <app-banner 
+            backgroundColor="var(--sapphire-blue)" 
+            message="Paste below your id and access token">
+        </app-banner>
         <div class="form-group">
-            <app-input class="form-field__input" placeholder={{id}} type="number"
+            <app-input 
+                class="form-field__input" 
+                placeholder='id'
+                [type]="'number'"
                 (valueEmitter)="receiveIdValue($event)">
             </app-input>
-            <app-input class="form-field__input" placeholder={{token}} type="text"
+            <app-input 
+                class="form-field__input" 
+                placeholder='token' 
+                [type]="'text'"
                 (valueEmitter)="receiveTokenValue($event)">
             </app-input>
         </div>
-
-        <div class="home-page__main-text">
-            <p>ready? click here, then:</p>
-        </div>
-
         <div class="home-page__btn-wrapper">
-            <app-button backgroundColor="var(--pale-silver)" buttonText="→" (valueEmitter)="viewAthleteCard()">
+            <app-button 
+                backgroundColor="var(--pale-silver)" 
+                buttonText="View card →" 
+                (valueEmitter)="viewAthleteCard()">
             </app-button>
         </div>
     </form>

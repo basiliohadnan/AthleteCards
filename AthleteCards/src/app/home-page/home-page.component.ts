@@ -7,32 +7,27 @@ import { ProfilePageService } from '../profile-page/profile-page.service';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent {
-
-  id: number = 28361582
-  token: string = '2de421bfac076462a...'
+  id: number = 0
+  token: string = ''
 
   constructor(
     private profilePageService: ProfilePageService
   ) { }
 
-  receiveIdValue = (id: number) => this.id = id
+  receiveIdValue = (id: number): number => this.id = id
 
-  validateId(id: number) {
-    if (id < 7) return false
-    else return true
-  }
+  validateId = (id: number): boolean => (id < 7) ? false : true
 
-  receiveTokenValue = (token: string) => this.token = token
+  receiveTokenValue = (token: string): string => this.token = token
 
+  validateToken = (token: string): boolean => (token.length < 40 || !token) ? false : true
 
-  validateToken(token: string) {
-    if (token.length < 40 || !token) return false
-    else return true
-  }
-
-  viewAthleteCard() {
-    if (!this.validateToken(this.token)) alert("Invalid token... Try again.")
-    else if (!this.validateId(this.id)) alert("Invalid id... Try again.")
-    else this.profilePageService.loadProfilePage(this.token, this.id)
+  viewAthleteCard(): void {
+    if (!this.validateToken(this.token))
+      alert("Invalid token... Try again.")
+    else if (!this.validateId(this.id))
+      alert("Invalid id... Try again.")
+    else
+      this.profilePageService.loadProfilePage(this.token, this.id)
   }
 }

@@ -8,8 +8,6 @@ import { IconModule } from './icon/icon.module';
 import { InputModule } from './input/input.module';
 
 @NgModule({
-  declarations: [
-  ],
   imports: [
     CommonModule,
   ],

@@ -4,7 +4,6 @@ import { ButtonComponent } from './button.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
-
 @NgModule({
   declarations: [
     ButtonComponent

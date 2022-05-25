@@ -20,9 +20,13 @@ export class ProfilePageComponent implements OnInit {
   athleteStatsAllRunTotals!: AllRunTotals
   athleteStatsAllRideTotals!: AllRideTotals
   loggedAthleteInfo!: LoggedAthleteInfo
-  runningAvgSpeed: any
-  runningAvgPace: any
-  cyclingAvgSpeed: any
+  runningAvgSpeed: string | number = 0
+  runningAvgPace: string | number = 0
+  cyclingAvgSpeed: string | number = 0
+  loading: boolean = true
+  notFound: boolean = false
+  errorStatus: number = 0
+  errorMessage: string = ''
 
   constructor(private activatedRoute: ActivatedRoute, private profilePageService: ProfilePageService) { }
 
@@ -36,23 +40,30 @@ export class ProfilePageComponent implements OnInit {
     })
   }
 
-  getLoggedInAthlete() {
+  getLoggedInAthlete(): void {
     this.profilePageService.getLoggedInAthlete(this.token).subscribe((response: LoggedAthleteInfo) => {
       this.loggedAthleteInfo = response
     })
   }
 
-  logActivityStats() {
+  logActivityStats(): void {
     this.profilePageService.logActivityStats(this.token, this.id).subscribe((response: AthleteStats) => {
       this.athleteStats = response
       this.athleteStatsAllRunTotals = this.athleteStats.all_run_totals
       this.athleteStatsAllRideTotals = this.athleteStats.all_ride_totals
       this.formatActivityStats()
       this.getLoggedInAthlete()
+      this.loading = false
+    }, (error) => {
+      console.log(error);
+      
+      this.notFound = true
+      this.errorStatus = error.status
+      this.errorMessage = error.message
     })
   }
 
-  formatActivityStats() {
+  formatActivityStats(): void {
     this.athleteStatsAllRunTotals.distance = Conversions.metersToKilometers(this.athleteStatsAllRunTotals.distance)
     this.athleteStatsAllRunTotals.moving_time = Conversions.secondsToHours(this.athleteStatsAllRunTotals.moving_time)
     this.runningAvgPace = Conversions.runningAvgPace(this.athleteStatsAllRunTotals.moving_time, this.athleteStatsAllRunTotals.distance)

@@ -14,13 +14,13 @@ ul {
 }
 
 a {
-  color: white;
+  color: #FFFFFF;
   text-decoration: none;
   box-shadow: inset 0 -1px 0 hsla(0, 0%, 100%, 0.4);
 }
 
 a:hover {
-  background-color: white;
+  background-color: #FFFFFF;
 }
 
 li:last-child {
@@ -41,33 +41,27 @@ div {
 
 .footer {
   &__link-strava {
-    &:hover{
+    &:hover {
       color: var(--strava-orange);
       font-weight: bolder;
     }
   }
 
   &__link-linkedin {
-    &:hover{
+    &:hover {
       color: var(--linkedin-blue);
       font-weight: bolder;
     }
   }
 
   &__link-github {
-    &:hover{
+    &:hover {
       color: var(--github-dark);
       font-weight: bolder;
-
     }
   }
 
   &__icon {
     height: 1em;
-
-    &::after {
-      content: "testeaaaaaaS"
-    }
   }
-
 }
