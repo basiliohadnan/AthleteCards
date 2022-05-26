@@ -1,6 +1,7 @@
 {
   "name": "athlete-cards",
   "version": "0.0.0",
+  "homepage" : "http://basiliohadnan.github.io/atheletecards",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
